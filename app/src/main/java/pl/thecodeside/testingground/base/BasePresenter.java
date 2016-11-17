@@ -6,9 +6,9 @@ package pl.thecodeside.testingground.base;
 
 public interface BasePresenter {
 
-    void subscribe();
+  void subscribe();
 
-    void unsubscribe();
+  void unsubscribe();
 
 }
 

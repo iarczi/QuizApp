@@ -1,4 +1,4 @@
-package pl.thecodeside.testingground;
+package pl.thecodeside.testingground.quizlist;
 
 import android.app.ListActivity;
 import android.os.Bundle;
@@ -9,6 +9,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+
+import pl.thecodeside.testingground.R;
 
 public class QuizListActivity extends ListActivity {
 
