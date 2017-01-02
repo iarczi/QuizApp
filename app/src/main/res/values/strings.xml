@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Testing Ground</string>
+    <string name="quiz_title">Tytuł quizu</string>
+    <string name="quiz_score">Ostatni wynik: </string>
+    <string name="quiz_progress">Quiz rozwiązany w </string>
+    <string name="quiz_question">Treść pytania:</string>
 </resources>

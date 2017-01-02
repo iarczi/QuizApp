@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:daimajia="http://schemas.android.com/apk/com.daimajia"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_quiz_resolve"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    style="@style/AppTheme"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="pl.thecodeside.testingground.quizresolve.QuizResolveActivity"
+    android:orientation="vertical">
+    
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:text="@string/quiz_title"
+        style="@style/TextHead" />
+
+    <com.daimajia.numberprogressbar.NumberProgressBar
+        daimajia:style="@style/NumberProgressBar_Passing_Green"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/quiz_question"
+        style="@style/BaseView"
+        android:id="@+id/textView" />
+
+    <RadioGroup
+        android:id="@+id/quiz_answers_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/BaseView"
+        >
+
+
+    </RadioGroup>
+
+</LinearLayout>

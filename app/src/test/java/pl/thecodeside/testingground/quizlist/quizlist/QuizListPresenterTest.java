@@ -1,14 +1,11 @@
 package pl.thecodeside.testingground.quizlist.quizlist;
 
-import com.google.common.collect.Lists;
+import org.junit.Before;
+import org.mockito.Mock;
+import org.mockito.MockitoAnnotations;
 
 import java.util.ArrayList;
 import java.util.List;
-import org.junit.Before;
-import org.mockito.ArgumentCaptor;
-import org.mockito.Captor;
-import org.mockito.Mock;
-import org.mockito.MockitoAnnotations;
 
 import pl.thecodeside.testingground.data.Quiz;
 import pl.thecodeside.testingground.quizlist.QuizListContract;
@@ -22,24 +19,23 @@ import static org.mockito.Mockito.when;
  */
 
 public class QuizListPresenterTest {
-  private static List<Quiz> QUIZLIST;
-  private QuizListPresenter quizListPresenter;
+    private static List<Quiz> QUIZLIST;
+    private QuizListPresenter quizListPresenter;
 
-  @Mock
-  private QuizListRepository quizListRepository;
+    @Mock
+    private QuizListRepository quizListRepository;
 
-  @Mock
-  private QuizListContract.View quizListView;
+    @Mock
+    private QuizListContract.View quizListView;
 
 
-
-  @Before
-  public void setupQuizListPresenter() {
-    MockitoAnnotations.initMocks(this);
-    quizListPresenter = new QuizListPresenter(quizListRepository, quizListView) ;
-    when(quizListView.isActive()).thenReturn(true);
-    QUIZLIST = new ArrayList<>();
-  }
+    @Before
+    public void setupQuizListPresenter() {
+        MockitoAnnotations.initMocks(this);
+        quizListPresenter = new QuizListPresenter(quizListRepository, quizListView);
+        when(quizListView.isActive()).thenReturn(true);
+        QUIZLIST = new ArrayList<>();
+    }
 
 
 }
