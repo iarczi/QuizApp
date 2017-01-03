@@ -7,7 +7,7 @@ import org.mockito.MockitoAnnotations;
 import java.util.ArrayList;
 import java.util.List;
 
-import pl.thecodeside.testingground.data.Quiz;
+import pl.thecodeside.testingground.data.source.list.QuizListItem;
 import pl.thecodeside.testingground.quizlist.QuizListContract;
 import pl.thecodeside.testingground.quizlist.QuizListPresenter;
 import pl.thecodeside.testingground.quizlist.QuizListRepository;
@@ -19,7 +19,7 @@ import static org.mockito.Mockito.when;
  */
 
 public class QuizListPresenterTest {
-    private static List<Quiz> QUIZLIST;
+    private static List<QuizListItem> QUIZLIST;
     private QuizListPresenter quizListPresenter;
 
     @Mock

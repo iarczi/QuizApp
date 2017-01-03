@@ -26,7 +26,6 @@
         <item name="android:paddingTop">10dp</item>
     </style>
 
-    <style name="pro" parent="daimajia:Nu"></style>
 
     <style name="TextHead" parent="BaseView">
         <item name="android:textSize">24sp</item>

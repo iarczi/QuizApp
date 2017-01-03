@@ -1,6 +1,10 @@
 package pl.thecodeside.testingground.quizlist;
 
+import java.util.List;
+
 import javax.inject.Inject;
+
+import pl.thecodeside.testingground.data.Quiz;
 
 /**
  * Created by Artur Latoszewski on 16.11.2016.
