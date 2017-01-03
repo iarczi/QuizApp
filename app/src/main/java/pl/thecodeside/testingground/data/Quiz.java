@@ -5,13 +5,32 @@ package pl.thecodeside.testingground.data;
  */
 
 public class Quiz {
-    private String imageUrl;
 
-    public Quiz(String imageUrl) {
+    private String title;
+    private String imageUrl;
+    private String id;
+
+
+    public Quiz(String title, String imageUrl, String id) {
+        this.title = title;
         this.imageUrl = imageUrl;
+        this.id = id;
     }
+
+
+
+    public String getTitle() {
+
+        return title;
+    }
+
+    public String getId() {
+        return id;
+    }
+
 
     public String getImageUrl() {
         return imageUrl;
     }
 }
+

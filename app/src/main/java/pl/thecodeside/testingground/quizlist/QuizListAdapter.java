@@ -8,19 +8,23 @@ import android.view.ViewGroup;
 
 import com.marshalchen.ultimaterecyclerview.UltimateViewAdapter;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import pl.thecodeside.testingground.R;
-import pl.thecodeside.testingground.data.Quiz;
+import pl.thecodeside.testingground.data.QuizResult;
 
 /**
  * Created by iarczi on 03.01.2017.
  */
 public class QuizListAdapter extends UltimateViewAdapter {
-    private List<Quiz> quizList;
+    private List<QuizResult> quizList;
     private LayoutInflater inflater;
+    private Context context;
 
     public QuizListAdapter(Context context) {
+        this.context = context;
+        quizList = new ArrayList<>();
         inflater = LayoutInflater.from(context);
     }
 
@@ -52,7 +56,7 @@ public class QuizListAdapter extends UltimateViewAdapter {
 
     @Override
     public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
-
+        ((QuizItemViewHolder)holder).populate(context, quizList.get(position));
     }
 
     @Override
@@ -65,7 +69,7 @@ public class QuizListAdapter extends UltimateViewAdapter {
 
     }
 
-    public void setQuizList(List<Quiz> quizList) {
+    public void setQuizList(List<QuizResult> quizList) {
         this.quizList.clear();
         this.quizList.addAll(quizList);
         notifyDataSetChanged();

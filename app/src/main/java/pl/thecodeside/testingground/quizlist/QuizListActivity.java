@@ -18,6 +18,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import pl.thecodeside.testingground.R;
 import pl.thecodeside.testingground.data.Quiz;
+import pl.thecodeside.testingground.data.QuizResult;
 
 public class QuizListActivity extends ListActivity implements QuizListContract.View{
 
@@ -40,7 +41,7 @@ public class QuizListActivity extends ListActivity implements QuizListContract.V
     }
 
     @Override
-    public void showQuizList(List<Quiz> quizList) {
+    public void showQuizList(List<QuizResult> quizList) {
         adapter.setQuizList(quizList);
     }
 
@@ -53,7 +54,7 @@ public class QuizListActivity extends ListActivity implements QuizListContract.V
     protected void onStart() {
         super.onStart();
 
-        adapter = new QuizListAdapter();
+        adapter = new QuizListAdapter(this);
         quizList.setLayoutManager(new LinearLayoutManager(this));
 
         quizList.setAdapter(adapter);
